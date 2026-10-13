@@ -284,6 +284,9 @@ The `ineapir` suite runs the same queries with [ineapir](https://github.com/es-i
 Docker container, see `test/ineapir`) and with Inex against the live API, and compares data, dates,
 metadata and identifiers.
 
+The [CI workflow](https://github.com/jaimeiniesta/inex/actions) checks formatting, Credo and
+[Sobelow](https://github.com/nccgroup/sobelow), and runs the unit tests on Elixir 1.18, 1.19 and 1.20.
+
 ## Acknowledgements
 
 - [Fred](https://github.com/akoutmos/fred), whose interface Inex follows.

@@ -293,7 +293,7 @@ defmodule Inex.Utils do
   defp field_spec(:operation_filters) do
     [
       filters: [
-        type: {:custom, Filters, :validate, []},
+        type: {:custom, Filters, :validate_operation, []},
         doc:
           "Variable/value filters, sent as `g1`, `g2`... parameters. Each tuple is a filter " <>
             "group (groups are combined with AND, the values of a group with OR). For example " <>

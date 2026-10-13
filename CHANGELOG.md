@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Operation filters (`Inex.Series.search/2`, `Inex.Series.search_observations/2`...) accept
+  up to 50 filter groups. Their `g1`, `g2`... keys are no longer created at runtime with
+  `String.to_atom/1`.
+
 ## v0.1.0 (2026-10-13)
 
 Initial release.

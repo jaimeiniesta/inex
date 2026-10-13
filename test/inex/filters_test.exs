@@ -29,6 +29,26 @@ defmodule Inex.FiltersTest do
     test "puts the values of a group under the same key" do
       assert Filters.to_operation_params(%{115 => [29, 8]}) == [g1: "115:29", g1: "115:8"]
     end
+
+    test "accepts up to 50 groups" do
+      filters = Enum.map(1..50, &{&1, 1})
+
+      assert {:g50, "50:1"} = filters |> Filters.to_operation_params() |> List.last()
+
+      assert_raise ArgumentError, "expected at most 50 filter groups", fn ->
+        Filters.to_operation_params([{51, 1} | filters])
+      end
+    end
+  end
+
+  describe "validate_operation/1" do
+    test "validates the filters and the number of groups" do
+      assert {:ok, [{3, 74}]} = Filters.validate_operation(%{3 => 74})
+      assert {:error, "invalid filter" <> _rest} = Filters.validate_operation([{0, 1}])
+
+      assert {:error, "expected at most 50 filter groups, got: 51"} =
+               Filters.validate_operation(Enum.map(1..51, &{&1, 1}))
+    end
   end
 
   describe "validate/1" do

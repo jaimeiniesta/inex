@@ -66,8 +66,8 @@ defmodule Inex.Filters do
 
   Used by `Inex.Series.search/2` and `Inex.Series.search_observations/2`.
   Every tuple becomes a filter group (`g1`, `g2`...). Groups are combined with
-  **AND** while the values inside a group are combined with **OR**. Only
-  numeric Tempus3 identifiers are supported here. Find them with
+  **AND** while the values inside a group are combined with **OR**. Up to 50
+  groups are accepted. Only numeric Tempus3 identifiers are supported here. Find them with
   `Inex.Operations.variables/2` and `Inex.Operations.variable_values/3`.
 
   ## Shortcuts
@@ -82,6 +82,12 @@ defmodule Inex.Filters do
   @shortcuts Map.new(@shortcut_definitions, fn {shortcut, {id, _description}} ->
                {shortcut, id}
              end)
+
+  # Operation filter groups are sent as `g1`, `g2`... The keys are built at
+  # compile time so that user input never creates atoms. One group per variable
+  # is enough, so the limit is far above what any operation needs.
+  @max_groups 50
+  @group_keys Enum.map(1..@max_groups, &String.to_atom("g#{&1}"))
 
   @type variable :: pos_integer() | String.t() | atom()
   @type value :: non_neg_integer() | String.t()
@@ -121,10 +127,13 @@ defmodule Inex.Filters do
   """
   @spec to_operation_params(t()) :: keyword(String.t())
   def to_operation_params(filters) do
+    if Enum.count(filters) > @max_groups do
+      raise ArgumentError, "expected at most #{@max_groups} filter groups"
+    end
+
     filters
-    |> Enum.with_index(1)
-    |> Enum.flat_map(fn {{variable, values}, index} ->
-      key = String.to_atom("g#{index}")
+    |> Enum.zip(@group_keys)
+    |> Enum.flat_map(fn {{variable, values}, key} ->
       Enum.map(List.wrap(values), &{key, pair(variable, &1)})
     end)
   end
@@ -147,6 +156,16 @@ defmodule Inex.Filters do
 
   def validate(other),
     do: {:error, "expected filters to be a list or a map, got: #{inspect(other)}"}
+
+  @doc false
+  # NimbleOptions custom validator for operation filters (`g1`, `g2`...)
+  def validate_operation(filters) do
+    with {:ok, filters} <- validate(filters) do
+      if length(filters) > @max_groups,
+        do: {:error, "expected at most #{@max_groups} filter groups, got: #{length(filters)}"},
+        else: {:ok, filters}
+    end
+  end
 
   defp valid_filter?({variable, values}) do
     valid_variable?(variable) and

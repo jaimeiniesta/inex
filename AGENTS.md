@@ -25,6 +25,7 @@ frames.
 | `mix test --only ineapir` | Compare with the R package (needs Docker, see `test/ineapir/README.md`) |
 | `mix format` | Format the code |
 | `mix credo --strict` | Lint |
+| `mix sobelow` | Security checks (config in `.sobelow-conf`) |
 | `mix dialyzer` | Type checks (PLT in `priv/plts/`) |
 | `mix docs` | Build the docs; must produce no warnings |
 | `mix coveralls` | Coverage |
@@ -131,6 +132,7 @@ frames.
 mix format --check-formatted
 mix compile --warnings-as-errors
 mix credo --strict
+mix sobelow
 mix test
 mix dialyzer
 mix docs

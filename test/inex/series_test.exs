@@ -171,6 +171,13 @@ defmodule Inex.SeriesTest do
                {"page", "1"}
              ]
     end
+
+    test "rejects more than 50 filter groups" do
+      assert {:error, %Error{type: :option_error, message: message}} =
+               Series.search("IPC", filters: Enum.map(1..51, &{&1, 1}))
+
+      assert message =~ "expected at most 50 filter groups"
+    end
   end
 
   describe "search_observations/2" do
