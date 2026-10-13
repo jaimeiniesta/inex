@@ -41,7 +41,7 @@ Add `inex` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:inex, "~> 0.1.0"}
+    {:inex, "~> 0.1"}
   ]
 end
 ```
@@ -49,7 +49,7 @@ end
 Or in Livebook:
 
 ```elixir
-Mix.install([{:inex, "~> 0.1.0"}])
+Mix.install([{:inex, "~> 0.1"}])
 ```
 
 ## Quick Start

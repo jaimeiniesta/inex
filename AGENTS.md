@@ -120,7 +120,7 @@ raw decoded JSON or Explorer data frames.
   values, metadata columns, filters), add or adjust the query in `queries.R` and its comparison
   in `cross_check_test.exs`. ineapir's output is the ground truth; do not hand-code expected
   values. Set `INEAPIR_OUTPUT` to reuse a previous R run.
-- **Livebooks** load Inex from Hex (`{:inex, "~> 0.1.0"}`). To try local changes, switch
+- **Livebooks** load Inex from Hex (`{:inex, "~> 0.1"}`). To try local changes, switch
   temporarily to `{:inex, path: Path.join(__DIR__, "..")}` (do not commit it). After changing the
   public API or an example, run every cell against the live API.
 

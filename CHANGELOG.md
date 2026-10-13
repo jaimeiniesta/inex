@@ -1,10 +1,11 @@
 # Changelog
 
-## Unreleased
+## v0.1.1 (2026-10-13)
 
 - Operation filters (`Inex.Series.search/2`, `Inex.Series.search_observations/2`...) accept
   up to 50 filter groups. Their `g1`, `g2`... keys are no longer created at runtime with
   `String.to_atom/1`.
+- Documentation: logo, badges and a note that Inex is not an official INE library.
 
 ## v0.1.0 (2026-10-13)
 
