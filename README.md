@@ -1,4 +1,6 @@
-# Inex
+<p align="center">
+  <img src="assets/logo.svg" alt="Inex" width="300">
+</p>
 
 An Elixir client for the [INE API JSON](https://www.ine.es/dyngs/DAB/index.htm?cid=1099), the open
 data service of Spain's National Statistics Institute (*Instituto Nacional de Estadística*), powered

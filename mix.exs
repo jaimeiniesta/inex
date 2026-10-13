@@ -63,7 +63,11 @@ defmodule Inex.MixProject do
     [
       main: "readme",
       source_ref: "v#{@version}",
-      extras: ["README.md", "CHANGELOG.md" | Path.wildcard("livebooks/*.livemd")],
+      assets: %{"assets" => "assets"},
+      extras: [
+        {"README.md", title: "Overview"},
+        "CHANGELOG.md" | Path.wildcard("livebooks/*.livemd")
+      ],
       groups_for_extras: [
         General: ["README.md", "CHANGELOG.md"],
         Livebooks: Path.wildcard("livebooks/*.livemd")

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 248 100" width="248" height="100" role="img" aria-labelledby="title">
+  <title id="title">Inex</title>
+  <style>
+    .in { fill: #c60b1e; }
+    .ex { fill: #4e2a8e; }
+    .ex-stroke { fill: none; stroke: #4e2a8e; }
+    @media (prefers-color-scheme: dark) {
+      .in { fill: #ef4452; }
+      .ex { fill: #a883e6; }
+      .ex-stroke { stroke: #a883e6; }
+    }
+  </style>
+
+  <!-- I -->
+  <rect class="in" x="12" y="20" width="12" height="80"/>
+  <!-- N -->
+  <polygon class="in" points="40,100 40,20 55,20 92,80.4 92,20 104,20 104,100 89,100 52,39.6 52,100"/>
+
+  <!-- e: open ring plus crossbar -->
+  <path class="ex-stroke" stroke-width="12" d="M172 70 A24 24 0 1 0 166.39 85.43"/>
+  <rect class="ex" x="124" y="65" width="54" height="10"/>
+  <!-- x -->
+  <polygon class="ex" points="186,40 200,40 236,100 222,100"/>
+  <polygon class="ex" points="222,40 236,40 200,100 186,100"/>
+  <!-- bar over the x (x̄, the sample mean) -->
+  <rect class="ex" x="186" y="20" width="50" height="10"/>
+</svg>
