@@ -4,6 +4,10 @@ An Elixir client for the [INE API JSON](https://www.ine.es/dyngs/DAB/index.htm?c
 data service of Spain's National Statistics Institute (*Instituto Nacional de Estadística*), powered
 by [Req](https://hexdocs.pm/req) and integrated with [Explorer](https://hexdocs.pm/explorer).
 
+> **Inex is not an official INE library.** It is an independent open source project, not
+> developed, endorsed or supported by the INE. The official client published by the INE is
+> [ineapir](https://github.com/es-ine/ineapir), for R.
+
 The INE API gives access to everything published in INEbase: consumer prices (IPC), the labour force
 survey (EPA), quarterly national accounts (GDP), population, tourism, housing prices and much more.
 It is free and does **not** require an API key.
@@ -290,3 +294,11 @@ metadata and identifiers.
 ## License
 
 MIT
+
+## Artificial Intelligence
+
+Contributions made with the help of AI tools are welcome. However, every issue and pull request
+must be created and supervised by a human, who is responsible for its content and for following up
+on the review.
+
+AI coding agents will find instructions about this repository in [AGENTS.md](https://github.com/jaimeiniesta/inex/blob/master/AGENTS.md).

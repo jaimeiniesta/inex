@@ -142,4 +142,6 @@ If you touched `Client`, `DataFrame`, `Filters` or option translation, also run
 ## Git
 
 - Commit only when asked.
+- Never open issues or pull requests on your own: a human must create and supervise them (see the
+  "Artificial Intelligence" section of the README).
 - Do not add `Co-Authored-By` trailers or any other AI attribution to commit messages.
