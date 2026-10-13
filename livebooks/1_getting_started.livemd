@@ -2,8 +2,8 @@
 
 ```elixir
 Mix.install([
-  # Once Inex is published on Hex use {:inex, "~> 0.1.0"} instead
-  {:inex, path: Path.join(__DIR__, "..")},
+  # To try a local checkout use {:inex, path: Path.join(__DIR__, "..")} instead
+  {:inex, "~> 0.1.0"},
   {:kino_explorer, "~> 0.1"},
   {:kino_vega_lite, "~> 0.1"}
 ])
