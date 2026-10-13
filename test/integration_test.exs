@@ -34,7 +34,7 @@ defmodule Inex.IntegrationTest do
     assert Date.diff(Date.utc_today(), List.last(dates)) < 120
   end
 
-  test "Fred-like wide data frame with series of different periodicities" do
+  test "wide data frame with series of different periodicities" do
     df =
       Inex.Series.observations_as_data_frame!(["IPC290750", "EPA452434", "CNTR6654"],
         observation_start: ~D[2024-01-01],

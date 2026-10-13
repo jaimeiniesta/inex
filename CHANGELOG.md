@@ -12,7 +12,8 @@ Initial release.
 
 - Coverage of every function of the INE API JSON (`wstempus`), plus the undocumented
   `OPERACIONES_TABLA`, `PERIODICIDAD_OPERACION`, `PERIODOS_PERIODICIDAD`, `UNIDADES` and `ESCALAS`.
-- Fred-like interface: `Inex.Series.observations/2` and `Inex.Series.observations_as_data_frame/2`.
+- `Inex.Series.observations/2` and `Inex.Series.observations_as_data_frame/2` for the data of one
+  or several series.
 - Explorer integration: wide and long (tidy) data frames with one column per metadata variable,
   conversion of metadata listings with `Inex.DataFrame.from_records/1`.
 - Validated, documented options (`NimbleOptions`) translated into the INE parameters, filters with

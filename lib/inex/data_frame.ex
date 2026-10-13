@@ -46,8 +46,7 @@ defmodule Inex.DataFrame do
   ## Wide format
 
   `to_wide/2` pivots a long data frame into a `date` column plus one column per
-  series, which is the format returned by `Fred.Series.observations_as_data_frame/2`
-  and is convenient for charts and comparisons.
+  series, which is convenient for charts and comparisons.
   """
 
   alias Explorer.DataFrame, as: DF

@@ -2,21 +2,25 @@
   <img src="assets/logo.svg" alt="Inex" width="300">
 </p>
 
+<p align="center">
+  <a href="https://github.com/jaimeiniesta/inex/actions/workflows/ci.yml"><img src="https://github.com/jaimeiniesta/inex/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://hex.pm/packages/inex"><img src="https://img.shields.io/hexpm/v/inex.svg" alt="Hex version"></a>
+  <a href="https://hexdocs.pm/inex"><img src="https://img.shields.io/badge/hex-docs-4e2a8e.svg" alt="Documentation"></a>
+  <a href="https://github.com/jaimeiniesta/inex/blob/master/LICENSE"><img src="https://img.shields.io/hexpm/l/inex.svg" alt="License"></a>
+</p>
+
 An Elixir client for the [INE API JSON](https://www.ine.es/dyngs/DAB/index.htm?cid=1099), the open
 data service of Spain's National Statistics Institute (*Instituto Nacional de Estadística*), powered
 by [Req](https://hexdocs.pm/req) and integrated with [Explorer](https://hexdocs.pm/explorer).
 
 > **Inex is not an official INE library.** It is an independent open source project, not
 > developed, endorsed or supported by the INE. The official client published by the INE is
-> [ineapir](https://github.com/es-ine/ineapir), for R.
+> [ineapir](https://github.com/es-ine/ineapir), for R, and Inex is tested against it to make sure
+> both return the same data.
 
 The INE API gives access to everything published in INEbase: consumer prices (IPC), the labour force
 survey (EPA), quarterly national accounts (GDP), population, tourism, housing prices and much more.
 It is free and does **not** require an API key.
-
-Inex follows the design of [Fred](https://hex.pm/packages/fred), the Elixir client for the Federal
-Reserve Economic Data API, and has been cross-checked against
-[ineapir](https://github.com/es-ine/ineapir), the official R package published by the INE.
 
 ## Contents
 
@@ -67,9 +71,8 @@ iex> Inex.Series.observations("IPC290750", last: 2, friendly: true)
  }}
 ```
 
-Or get several series into an `Explorer.DataFrame`, one column per series, just like
-`Fred.Series.observations_as_data_frame/2`. Here: CPI annual change (monthly), unemployment rate
-and GDP annual growth (quarterly):
+Or get several series into an `Explorer.DataFrame`, one column per series. Here: CPI annual change
+(monthly), unemployment rate and GDP annual growth (quarterly):
 
 ```elixir
 iex> ["IPC290750", "EPA452434", "CNTR6654"]

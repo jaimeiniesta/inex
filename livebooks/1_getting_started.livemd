@@ -101,8 +101,7 @@ Inex.Series.observations_as_data_frame!("IPC290750",
 
 ## Several Series at Once
 
-Just like `Fred.Series.observations_as_data_frame/2`, you can pass a list of series: they are
-fetched concurrently and joined by date. Here we compare the CPI annual change (monthly) with the
+You can also pass a list of series: they are fetched concurrently and joined by date. Here we compare the CPI annual change (monthly) with the
 unemployment rate from the labour force survey (EPA) and the GDP annual growth from the
 quarterly national accounts (CNTR), both quarterly:
 

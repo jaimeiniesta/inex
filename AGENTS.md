@@ -5,9 +5,8 @@ Instructions for AI coding agents working on this repository.
 ## Project
 
 Inex is an Elixir client for the [INE JSON API](https://www.ine.es/dyngs/DAB/index.htm?cid=1099)
-(`https://servicios.ine.es/wstempus/js/{ES|EN}/{FUNCTION}/{inputs}?params`). Its interface follows
-[Fred](https://hex.pm/packages/fred) and returns either the raw decoded JSON or Explorer data
-frames.
+(`https://servicios.ine.es/wstempus/js/{ES|EN}/{FUNCTION}/{inputs}?params`). It returns either the
+raw decoded JSON or Explorer data frames.
 
 - **Reference implementation:** [ineapir](https://github.com/es-ine/ineapir), the official R
   package. When the API behaviour is unclear, check what ineapir does.
@@ -66,8 +65,7 @@ frames.
 - **Return values:**
   - Every function returns `{:ok, result} | {:error, %Inex.Error{}}`. Non-bang functions never
     raise.
-  - Data frame functions return `{:ok, df}` and have a bang variant (`Utils.bang!/1`). This is a
-    deliberate deviation from Fred.
+  - Data frame functions return `{:ok, df}` and have a bang variant (`Utils.bang!/1`).
 - **Raw responses are returned untouched,** keeping the INE's Spanish keys (`"COD"`, `"Nombre"`,
   `"Data"`...).
 - **Public functions have `@spec`s and docs with examples.** Example outputs must be real: run the
