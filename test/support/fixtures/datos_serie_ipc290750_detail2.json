@@ -1,0 +1,10 @@
+{"COD":"IPC290750", "Nombre":"Nacional. Índice general. Variación anual. ", "Unidad":{"Id":135, "Nombre":"Tasas", "Codigo":null, "Abrev":null}
+, "Escala":{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":null, "Abrev":null}
+, "Data":[{"Fecha":1785535200000, "TipoDato":{"Id":1, "Nombre":"Definitivo", "Codigo":"D"}
+, "Periodo":{"Id":8, "Valor":8, "FK_Periodicidad":1, "Dia_inicio":"1", "Mes_inicio":"8", "Codigo":"08", "Nombre":"M08", "Nombre_largo":"Agosto"}
+, "Anyo":2026, "NombrePeriodo":"2026M08", "CodigoPeriodo":"202608", "Valor":4.3, "Secreto":false}
+,{"Fecha":1788213600000, "TipoDato":{"Id":3, "Nombre":"Avance", "Codigo":"AV"}
+, "Periodo":{"Id":9, "Valor":9, "FK_Periodicidad":1, "Dia_inicio":"1", "Mes_inicio":"9", "Codigo":"09", "Nombre":"M09", "Nombre_largo":"Septiembre"}
+, "Anyo":2026, "NombrePeriodo":"2026M09", "CodigoPeriodo":"202609", "Valor":4.9, "Secreto":false}
+]
+}

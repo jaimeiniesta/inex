@@ -1,0 +1,25 @@
+[{"Nombre":"TOTAL EDADES, Españoles, Ambos sexos", "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+, "Data":[{"NombrePeriodo":"2022", "Valor":4.1932488E7}
+,{"NombrePeriodo":"2021", "Valor":4.1944959E7}
+]
+}
+,{"Nombre":"TOTAL EDADES, Españoles, Hombres", "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+, "Data":[{"NombrePeriodo":"2022", "Valor":2.0487167E7}
+,{"NombrePeriodo":"2021", "Valor":2.0497801E7}
+]
+}
+,{"Nombre":"TOTAL EDADES, Españoles, Mujeres", "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+, "Data":[{"NombrePeriodo":"2022", "Valor":2.1445321E7}
+,{"NombrePeriodo":"2021", "Valor":2.1447158E7}
+]
+}
+]

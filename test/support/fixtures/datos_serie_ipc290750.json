@@ -1,0 +1,7 @@
+{"COD":"IPC290750", "Nombre":"Nacional. Índice general. Variación anual. ", "FK_Unidad":135, "FK_Escala":1, "Data":[{"Fecha":1777586400000, "FK_TipoDato":1, "FK_Periodo":5, "Anyo":2026, "Valor":3.2, "Secreto":false}
+,{"Fecha":1780264800000, "FK_TipoDato":1, "FK_Periodo":6, "Anyo":2026, "Valor":3.2, "Secreto":false}
+,{"Fecha":1782856800000, "FK_TipoDato":1, "FK_Periodo":7, "Anyo":2026, "Valor":3.6, "Secreto":false}
+,{"Fecha":1785535200000, "FK_TipoDato":1, "FK_Periodo":8, "Anyo":2026, "Valor":4.3, "Secreto":false}
+,{"Fecha":1788213600000, "FK_TipoDato":3, "FK_Periodo":9, "Anyo":2026, "Valor":4.9, "Secreto":false}
+]
+}

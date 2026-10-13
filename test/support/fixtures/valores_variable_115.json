@@ -1,0 +1,62 @@
+[{"Id":16473, "FK_Variable":115, "Nombre":"Total Nacional", "Codigo":"00"}
+,{"Id":3, "FK_Variable":115, "Nombre":"Albacete", "Codigo":"02", "FK_JerarquiaPadres":[9004]}
+,{"Id":4, "FK_Variable":115, "Nombre":"Alicante/Alacant", "Codigo":"03", "FK_JerarquiaPadres":[9006]}
+,{"Id":5, "FK_Variable":115, "Nombre":"Almería", "Codigo":"04", "FK_JerarquiaPadres":[8997]}
+,{"Id":2, "FK_Variable":115, "Nombre":"Araba/Álava", "Codigo":"01", "FK_JerarquiaPadres":[9012]}
+,{"Id":33, "FK_Variable":115, "Nombre":"Asturias", "Codigo":"33", "FK_JerarquiaPadres":[8999]}
+,{"Id":6, "FK_Variable":115, "Nombre":"Ávila", "Codigo":"05", "FK_JerarquiaPadres":[9003]}
+,{"Id":7, "FK_Variable":115, "Nombre":"Badajoz", "Codigo":"06", "FK_JerarquiaPadres":[9007]}
+,{"Id":8, "FK_Variable":115, "Nombre":"Balears, Illes", "Codigo":"07", "FK_JerarquiaPadres":[9000,416510]}
+,{"Id":9, "FK_Variable":115, "Nombre":"Barcelona", "Codigo":"08", "FK_JerarquiaPadres":[9005]}
+,{"Id":48, "FK_Variable":115, "Nombre":"Bizkaia", "Codigo":"48", "FK_JerarquiaPadres":[9012]}
+,{"Id":10, "FK_Variable":115, "Nombre":"Burgos", "Codigo":"09", "FK_JerarquiaPadres":[9003]}
+,{"Id":11, "FK_Variable":115, "Nombre":"Cáceres", "Codigo":"10", "FK_JerarquiaPadres":[9007]}
+,{"Id":12, "FK_Variable":115, "Nombre":"Cádiz", "Codigo":"11", "FK_JerarquiaPadres":[8997]}
+,{"Id":39, "FK_Variable":115, "Nombre":"Cantabria", "Codigo":"39", "FK_JerarquiaPadres":[9002]}
+,{"Id":13, "FK_Variable":115, "Nombre":"Castellón/Castelló", "Codigo":"12", "FK_JerarquiaPadres":[9006]}
+,{"Id":14, "FK_Variable":115, "Nombre":"Ciudad Real", "Codigo":"13", "FK_JerarquiaPadres":[9004]}
+,{"Id":15, "FK_Variable":115, "Nombre":"Córdoba", "Codigo":"14", "FK_JerarquiaPadres":[8997]}
+,{"Id":16, "FK_Variable":115, "Nombre":"Coruña, A", "Codigo":"15", "FK_JerarquiaPadres":[9008]}
+,{"Id":17, "FK_Variable":115, "Nombre":"Cuenca", "Codigo":"16", "FK_JerarquiaPadres":[9004]}
+,{"Id":21, "FK_Variable":115, "Nombre":"Gipuzkoa", "Codigo":"20", "FK_JerarquiaPadres":[9012]}
+,{"Id":18, "FK_Variable":115, "Nombre":"Girona", "Codigo":"17", "FK_JerarquiaPadres":[9005]}
+,{"Id":19, "FK_Variable":115, "Nombre":"Granada", "Codigo":"18", "FK_JerarquiaPadres":[8997]}
+,{"Id":20, "FK_Variable":115, "Nombre":"Guadalajara", "Codigo":"19", "FK_JerarquiaPadres":[9004]}
+,{"Id":22, "FK_Variable":115, "Nombre":"Huelva", "Codigo":"21", "FK_JerarquiaPadres":[8997]}
+,{"Id":23, "FK_Variable":115, "Nombre":"Huesca", "Codigo":"22", "FK_JerarquiaPadres":[8998]}
+,{"Id":24, "FK_Variable":115, "Nombre":"Jaén", "Codigo":"23", "FK_JerarquiaPadres":[8997]}
+,{"Id":25, "FK_Variable":115, "Nombre":"León", "Codigo":"24", "FK_JerarquiaPadres":[9003]}
+,{"Id":26, "FK_Variable":115, "Nombre":"Lleida", "Codigo":"25", "FK_JerarquiaPadres":[9005]}
+,{"Id":28, "FK_Variable":115, "Nombre":"Lugo", "Codigo":"27", "FK_JerarquiaPadres":[9008]}
+,{"Id":29, "FK_Variable":115, "Nombre":"Madrid", "Codigo":"28", "FK_JerarquiaPadres":[9009]}
+,{"Id":30, "FK_Variable":115, "Nombre":"Málaga", "Codigo":"29", "FK_JerarquiaPadres":[8997]}
+,{"Id":31, "FK_Variable":115, "Nombre":"Murcia", "Codigo":"30", "FK_JerarquiaPadres":[9010]}
+,{"Id":32, "FK_Variable":115, "Nombre":"Navarra", "Codigo":"31", "FK_JerarquiaPadres":[9011]}
+,{"Id":53, "FK_Variable":115, "Nombre":"Ourense", "Codigo":"32", "FK_JerarquiaPadres":[9008]}
+,{"Id":34, "FK_Variable":115, "Nombre":"Palencia", "Codigo":"34", "FK_JerarquiaPadres":[9003]}
+,{"Id":35, "FK_Variable":115, "Nombre":"Palmas, Las", "Codigo":"35", "FK_JerarquiaPadres":[9001,416510]}
+,{"Id":36, "FK_Variable":115, "Nombre":"Pontevedra", "Codigo":"36", "FK_JerarquiaPadres":[9008]}
+,{"Id":27, "FK_Variable":115, "Nombre":"Rioja, La", "Codigo":"26", "FK_JerarquiaPadres":[9013]}
+,{"Id":37, "FK_Variable":115, "Nombre":"Salamanca", "Codigo":"37", "FK_JerarquiaPadres":[9003]}
+,{"Id":38, "FK_Variable":115, "Nombre":"Santa Cruz de Tenerife", "Codigo":"38", "FK_JerarquiaPadres":[9001,416510]}
+,{"Id":40, "FK_Variable":115, "Nombre":"Segovia", "Codigo":"40", "FK_JerarquiaPadres":[9003]}
+,{"Id":41, "FK_Variable":115, "Nombre":"Sevilla", "Codigo":"41", "FK_JerarquiaPadres":[8997]}
+,{"Id":42, "FK_Variable":115, "Nombre":"Soria", "Codigo":"42", "FK_JerarquiaPadres":[9003]}
+,{"Id":43, "FK_Variable":115, "Nombre":"Tarragona", "Codigo":"43", "FK_JerarquiaPadres":[9005]}
+,{"Id":44, "FK_Variable":115, "Nombre":"Teruel", "Codigo":"44", "FK_JerarquiaPadres":[8998]}
+,{"Id":45, "FK_Variable":115, "Nombre":"Toledo", "Codigo":"45", "FK_JerarquiaPadres":[9004]}
+,{"Id":46, "FK_Variable":115, "Nombre":"Valencia/València", "Codigo":"46", "FK_JerarquiaPadres":[9006]}
+,{"Id":47, "FK_Variable":115, "Nombre":"Valladolid", "Codigo":"47", "FK_JerarquiaPadres":[9003]}
+,{"Id":49, "FK_Variable":115, "Nombre":"Zamora", "Codigo":"49", "FK_JerarquiaPadres":[9003]}
+,{"Id":50, "FK_Variable":115, "Nombre":"Zaragoza", "Codigo":"50", "FK_JerarquiaPadres":[8998]}
+,{"Id":51, "FK_Variable":115, "Nombre":"Ceuta", "Codigo":"51", "FK_JerarquiaPadres":[9015]}
+,{"Id":52, "FK_Variable":115, "Nombre":"Melilla", "Codigo":"52", "FK_JerarquiaPadres":[8995]}
+,{"Id":68, "FK_Variable":115, "Nombre":"Extranjero", "Codigo":""}
+,{"Id":15299, "FK_Variable":115, "Nombre":"Total Ciudades con Metro", "Codigo":""}
+,{"Id":274508, "FK_Variable":115, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+,{"Id":285494, "FK_Variable":115, "Nombre":"Otras Comunidades Autónomas", "Codigo":""}
+,{"Id":291907, "FK_Variable":115, "Nombre":"Peninsula y Baleares", "Codigo":""}
+,{"Id":416366, "FK_Variable":115, "Nombre":"No residente", "Codigo":""}
+,{"Id":416510, "FK_Variable":115, "Nombre":"Total Islas", "Codigo":""}
+,{"Id":457344, "FK_Variable":115, "Nombre":"España peninsular", "Codigo":"", "FK_JerarquiaPadres":[16473]}
+]

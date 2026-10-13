@@ -1,0 +1,142 @@
+[{"COD":"IPC290750", "Nombre":"Nacional. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-09-01T00:00:00.000+02:00", "T3_TipoDato":"Avance", "T3_Periodo":"M09", "Anyo":2026, "Valor":4.9}
+,{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.3}
+]
+}
+,{"COD":"IPC293659", "Nombre":"Andalucía. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":8997, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Andalucía", "Codigo":"01"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.0}
+]
+}
+,{"COD":"IPC293715", "Nombre":"Aragón. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":8998, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Aragón", "Codigo":"02"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":3.9}
+]
+}
+,{"COD":"IPC293771", "Nombre":"Asturias, Principado de. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":8999, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Asturias, Principado de", "Codigo":"03"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":3.9}
+]
+}
+,{"COD":"IPC293827", "Nombre":"Balears, Illes. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9000, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Balears, Illes", "Codigo":"04"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.4}
+]
+}
+,{"COD":"IPC293883", "Nombre":"Canarias. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9001, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Canarias", "Codigo":"05"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":3.8}
+]
+}
+,{"COD":"IPC293939", "Nombre":"Cantabria. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9002, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Cantabria", "Codigo":"06"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":5.1}
+]
+}
+,{"COD":"IPC293995", "Nombre":"Castilla y León. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9003, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Castilla y León", "Codigo":"07"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.7}
+]
+}
+,{"COD":"IPC294051", "Nombre":"Castilla - La Mancha. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9004, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Castilla - La Mancha", "Codigo":"08"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.7}
+]
+}
+,{"COD":"IPC294107", "Nombre":"Cataluña. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9005, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Cataluña", "Codigo":"09"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.0}
+]
+}
+,{"COD":"IPC294163", "Nombre":"Comunitat Valenciana. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9006, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Comunitat Valenciana", "Codigo":"10"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.1}
+]
+}
+,{"COD":"IPC294219", "Nombre":"Extremadura. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9007, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Extremadura", "Codigo":"11"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.2}
+]
+}
+,{"COD":"IPC294275", "Nombre":"Galicia. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9008, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Galicia", "Codigo":"12"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.8}
+]
+}
+,{"COD":"IPC294331", "Nombre":"Madrid, Comunidad de. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9009, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Madrid, Comunidad de", "Codigo":"13"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.7}
+]
+}
+,{"COD":"IPC294387", "Nombre":"Murcia, Región de. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9010, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Murcia, Región de", "Codigo":"14"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.3}
+]
+}
+,{"COD":"IPC294443", "Nombre":"Navarra, Comunidad Foral de. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9011, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.2}
+]
+}
+,{"COD":"IPC294499", "Nombre":"País Vasco. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9012, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"País Vasco", "Codigo":"16"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.5}
+]
+}
+,{"COD":"IPC294555", "Nombre":"Rioja, La. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9013, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Rioja, La", "Codigo":"17"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":3.9}
+]
+}
+,{"COD":"IPC294611", "Nombre":"Ceuta. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":9015, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Ceuta", "Codigo":"18"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":2.9}
+]
+}
+,{"COD":"IPC293603", "Nombre":"Melilla. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":8995, "T3_Variable":"Comunidades y Ciudades Autónomas", "Nombre":"Melilla", "Codigo":"19"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":3.8}
+]
+}
+]

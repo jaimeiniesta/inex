@@ -1,0 +1,9 @@
+[{"Id":19, "Valor":1, "FK_Periodicidad":3, "Dia_inicio":"1", "Mes_inicio":"1", "Codigo":"I", "Nombre":"T1", "Nombre_largo":"Trimestre 1/"}
+,
+{"Id":20, "Valor":2, "FK_Periodicidad":3, "Dia_inicio":"1", "Mes_inicio":"4", "Codigo":"II", "Nombre":"T2", "Nombre_largo":"Trimestre 2/"}
+,
+{"Id":21, "Valor":3, "FK_Periodicidad":3, "Dia_inicio":"1", "Mes_inicio":"7", "Codigo":"III", "Nombre":"T3", "Nombre_largo":"Trimestre 3/"}
+,
+{"Id":22, "Valor":4, "FK_Periodicidad":3, "Dia_inicio":"1", "Mes_inicio":"10", "Codigo":"IV", "Nombre":"T4", "Nombre_largo":"Trimestre 4/"}
+]
+

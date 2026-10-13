@@ -1,0 +1,6 @@
+{"COD":"EPA452434", "Nombre":"Tasa de paro de la población. Ambos sexos. Total Nacional. Total. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "Data":[{"Fecha":"2025-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"T3", "Anyo":2025, "Valor":10.45}
+,{"Fecha":"2025-10-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"T4", "Anyo":2025, "Valor":9.93}
+,{"Fecha":"2026-01-01T00:00:00.000+01:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"T1", "Anyo":2026, "Valor":10.83}
+,{"Fecha":"2026-04-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"T2", "Anyo":2026, "Valor":9.87}
+]
+}

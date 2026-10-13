@@ -1,0 +1,241 @@
+[{"FK_Operacion":22, "Nombre":"TOTAL EDADES, TOTAL, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, TOTAL, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, TOTAL, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Españoles, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Españoles, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Españoles, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Extranjeros, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Extranjeros, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, Extranjeros, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, % Extranjeros, Ambos sexos", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, % Extranjeros, Hombres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"TOTAL EDADES, % Extranjeros, Mujeres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"TOTAL EDADES", "Codigo":"totaledades"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, TOTAL, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, TOTAL, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, TOTAL, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Españoles, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Españoles, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Españoles, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Extranjeros, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Extranjeros, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, Extranjeros, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, % Extranjeros, Ambos sexos", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, % Extranjeros, Hombres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"0-15 años, % Extranjeros, Mujeres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"0-15 años", "Codigo":"015anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, TOTAL, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, TOTAL, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, TOTAL, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Españoles, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Españoles, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Españoles, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Extranjeros, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Extranjeros, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, Extranjeros, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, % Extranjeros, Ambos sexos", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, % Extranjeros, Hombres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"16-64 años, % Extranjeros, Mujeres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"16-64 años", "Codigo":"1664anos"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, TOTAL, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, TOTAL, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, TOTAL, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"TOTAL", "Codigo":"total"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Españoles, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Españoles, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Españoles, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Españoles", "Codigo":"espanoles"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Extranjeros, Ambos sexos", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Extranjeros, Hombres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, Extranjeros, Mujeres", "Decimales":0, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"Extranjeros", "Codigo":"extranjeros"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, % Extranjeros, Ambos sexos", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Ambos sexos", "Codigo":"ambossexos"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, % Extranjeros, Hombres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Hombres", "Codigo":"hombres"}
+]
+}
+,{"FK_Operacion":22, "Nombre":"65 y más, % Extranjeros, Mujeres", "Decimales":2, "MetaData":[{"T3_Variable":"edad (3 grupos de edad)", "Nombre":"65 y más", "Codigo":"65ymas"}
+,{"T3_Variable":"Españoles/Extranjeros", "Nombre":"% Extranjeros", "Codigo":"extranjeros~1"}
+,{"T3_Variable":"Sexo", "Nombre":"Mujeres", "Codigo":"mujeres"}
+]
+}
+]

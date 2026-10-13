@@ -1,0 +1,241 @@
+# Exploring INEbase
+
+```elixir
+Mix.install([
+  # Once Inex is published on Hex use {:inex, "~> 0.1.0"} instead
+  {:inex, path: Path.join(__DIR__, "..")},
+  {:kino_explorer, "~> 0.1"},
+  {:kino_vega_lite, "~> 0.1"}
+])
+```
+
+## Setup
+
+INEbase is organised in **operations** (the CPI, the labour force survey...), which contain
+**tables**, which contain **series**. Series are defined by the **values** of some **variables**
+(province, sex, type of data...), and those values are what we use to filter tables and
+operations. This notebook walks through that hierarchy.
+
+```elixir
+alias Explorer.DataFrame, as: DF
+alias Explorer.Series, as: S
+alias VegaLite, as: Vl
+
+require Explorer.DataFrame
+
+Inex.Telemetry.Logger.attach(level: :info)
+```
+
+## Operations
+
+`Inex.Operations.list/1` returns every statistical operation available in the API.
+`Inex.DataFrame.from_records/1` turns any metadata listing into a data frame, which Livebook
+renders as an interactive table:
+
+```elixir
+{:ok, operations} = Inex.Operations.list()
+
+operations = Inex.DataFrame.from_records(operations)
+```
+
+Let's look for the operations about prices. Since INE field names start with an uppercase letter,
+we refer to them with `col/1` inside Explorer queries:
+
+```elixir
+DF.filter(operations, contains(col("Nombre"), "Precio"))
+```
+
+Operations can be referred to by their numeric id (`25`), their code (`"IPC"`) or their IOE code
+(`"IOE30138"`):
+
+```elixir
+Inex.Operations.get("IOE30138")
+```
+
+## Tables
+
+The tables of an operation are the ones you see in INEbase:
+
+```elixir
+{:ok, tables} = Inex.Operations.tables("IPC")
+
+tables
+|> Inex.DataFrame.from_records()
+|> DF.select(["Id", "Nombre", "Codigo"])
+```
+
+Table `76136` holds the CPI by autonomous community (*comunidades autónomas*). Its URL in INEbase is
+`https://www.ine.es/jaxiT3/Tabla.htm?t=76136`. `Inex.Tables.values/2` returns every variable and
+value that defines it, which is all we need to filter it:
+
+```elixir
+{:ok, values} = Inex.Tables.values(76136)
+
+values
+|> Inex.DataFrame.from_records()
+|> DF.select(["Variable.Id", "Variable.Nombre", "Id", "Nombre"])
+```
+
+## Filtering a Table
+
+Filters are `{variable_id, value_id}` tuples. A list of values selects several of them and `:all`
+selects every value of the variable. Let's get the annual change (`{3, 74}`) of the general index
+(`{762, 304092}`) for every autonomous community (`{70, :all}`):
+
+```elixir
+regional_cpi =
+  Inex.Tables.observations_as_data_frame!(76136,
+    filters: [{3, 74}, {762, 304092}, {70, :all}],
+    observation_start: ~D[2026-01-01]
+  )
+```
+
+The data frame is **long** (one row per observation) and has one column per variable of the
+table, so we can work with them directly. The most common variables have shortcuts borrowed from
+the official `ineapir` R package, so the same query can be written as:
+
+```elixir
+Inex.Tables.observations_as_data_frame!(76136,
+  filters: [data_type: 74, cpi_group: 304092, ccaa: :all],
+  observation_start: ~D[2026-01-01]
+)
+|> DF.n_rows()
+```
+
+Now let's rank the regions by their latest annual inflation:
+
+```elixir
+latest_date = regional_cpi["date"] |> S.max()
+
+latest =
+  regional_cpi
+  |> DF.filter(date == ^latest_date)
+  |> DF.rename(%{"Comunidades y Ciudades Autónomas" => "region"})
+  |> DF.select(["region", "value"])
+  |> DF.sort_by(desc: value)
+
+Vl.new(width: 600, height: 400, title: "CPI annual change by region - #{latest_date}")
+|> Vl.data_from_values(latest)
+|> Vl.mark(:bar)
+|> Vl.encode_field(:x, "value", type: :quantitative, title: "%")
+|> Vl.encode_field(:y, "region", type: :nominal, sort: "-x", title: nil)
+```
+
+## Searching the Series of an Operation
+
+You don't need to know the table: you can filter all the series of an operation by their
+variables. First, the variables of the CPI:
+
+```elixir
+{:ok, variables} = Inex.Operations.variables("IPC")
+
+Inex.DataFrame.from_records(variables)
+```
+
+And the values of one of them, the provinces (`115`):
+
+```elixir
+{:ok, provinces} = Inex.Operations.variable_values("IPC", 115)
+
+provinces
+|> Inex.DataFrame.from_records()
+|> DF.select(["Id", "Nombre", "Codigo"])
+```
+
+Note the difference between the `Id` of a value, used in filters, and its official `Codigo`: the
+province of Madrid has the `Id` `29` and the code `"28"` (the one used in postal codes).
+
+`Inex.Series.search/2` returns the series matching the filters. Here: the monthly series of the
+province of Madrid (`29`) with the annual change (`74`) of every ECOICOP group:
+
+```elixir
+{:ok, madrid_series} =
+  Inex.Series.search("IPC",
+    filters: [province: 29, data_type: 74, cpi_group: :all],
+    periodicity: :monthly
+  )
+
+madrid_series
+|> Inex.DataFrame.from_records()
+|> DF.select(["COD", "Nombre"])
+```
+
+`Inex.Series.search_observations_as_data_frame/2` returns their data directly. Let's compare the
+inflation of every province:
+
+```elixir
+by_province =
+  Inex.Series.search_observations_as_data_frame!("IPC",
+    filters: [data_type: 74, cpi_group: 304092, province: :all],
+    periodicity: :monthly,
+    observation_start: ~D[2025-01-01]
+  )
+  |> DF.rename(%{"Provincias" => "province"})
+
+Vl.new(width: 700, height: 350, title: "CPI annual change by province (%)")
+|> Vl.data_from_values(DF.select(by_province, ["date", "province", "value"]))
+|> Vl.mark(:boxplot)
+|> Vl.encode_field(:x, "date", type: :ordinal, time_unit: :yearmonth, title: nil)
+|> Vl.encode_field(:y, "value", type: :quantitative, title: "%")
+```
+
+## PC-Axis and tpx Tables
+
+Some tables are not stored in Tempus3 but in PC-Axis or tpx files. Their ids come from the INEbase
+URL: `https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p08/l0/&file=01001.px` becomes
+`"t20/e245/p08/l0/01001.px"`. They are filtered by codes instead of numeric ids, and
+`Inex.Tables.values/2` gives us those codes too:
+
+```elixir
+px_table = "t20/e245/p08/l0/01001.px"
+
+{:ok, px_values} = Inex.Tables.values(px_table)
+
+Inex.DataFrame.from_records(px_values)
+```
+
+```elixir
+Inex.Tables.observations_as_data_frame!(px_table,
+  filters: [
+    {"sexo", :all},
+    {"espanolesextranjeros", ["espanoles", "extranjeros"]},
+    {"edad3gruposdeedad", "totaledades"}
+  ]
+)
+|> DF.select(["name", "period", "value", "Sexo", "Españoles/Extranjeros"])
+```
+
+## Hierarchies
+
+Values are organised in hierarchies. `Inex.Variables.children/3` returns the children of a value,
+for example the provinces of Galicia (variable `70`, value `9008`):
+
+```elixir
+{:ok, galicia} = Inex.Variables.children(70, 9008)
+
+galicia
+|> Inex.DataFrame.from_records()
+|> DF.select(["Id", "Nombre", "Codigo"])
+```
+
+## Release Calendar
+
+Publications hold the release dates of every operation, past and scheduled:
+
+```elixir
+{:ok, publications} = Inex.Operations.publications("IPC")
+
+Inex.DataFrame.from_records(publications)
+```
+
+```elixir
+{:ok, dates} = Inex.Publications.dates(8, friendly: true)
+
+today = Date.utc_today()
+
+dates
+|> Enum.map(&%{name: &1["Nombre"], date: &1["Fecha"] |> String.slice(0, 10) |> Date.from_iso8601!()})
+|> Enum.filter(&(Date.compare(&1.date, today) != :lt))
+|> Enum.take(6)
+|> DF.new()
+```

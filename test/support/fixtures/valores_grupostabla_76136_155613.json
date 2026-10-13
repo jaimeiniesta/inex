@@ -1,0 +1,42 @@
+[{"Id":304092, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":304093, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Alimentos y bebidas no alcohólicas", "Codigo":"01", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418050, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Bebidas alcohólicas y tabaco", "Codigo":"02", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":304095, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Vestido y calzado", "Codigo":"03", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":304096, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Vivienda, agua, electricidad, gas y otros combustibles", "Codigo":"04", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":304097, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Muebles, artículos del hogar y artículos para el mantenimiento corriente del hogar", "Codigo":"05", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":304098, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Sanidad", "Codigo":"06", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":304099, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Transporte", "Codigo":"07", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418056, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Información y comunicaciones", "Codigo":"08", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418057, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Actividades recreativas, deporte y cultura", "Codigo":"09", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418058, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Enseñanza", "Codigo":"10", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418059, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Restaurantes y servicios de alojamiento", "Codigo":"11", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418060, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Seguros y servicios financieros", "Codigo":"12", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+,{"Id":418061, "Variable":{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+, "Nombre":"Cuidado personal, protección social, y bienes y servicios diversos", "Codigo":"13", "JerarquiaPadres":[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+]}
+]

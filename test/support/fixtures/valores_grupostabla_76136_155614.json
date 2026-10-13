@@ -1,0 +1,9 @@
+[{"Id":83, "Variable":{"Id":3, "Nombre":"Índices y Tasas", "Codigo":"7"}
+, "Nombre":"Índice", "Codigo":"0"}
+,{"Id":84, "Variable":{"Id":3, "Nombre":"Índices y Tasas", "Codigo":"7"}
+, "Nombre":"Variación mensual", "Codigo":"1"}
+,{"Id":74, "Variable":{"Id":3, "Nombre":"Índices y Tasas", "Codigo":"7"}
+, "Nombre":"Variación anual", "Codigo":"2"}
+,{"Id":87, "Variable":{"Id":3, "Nombre":"Índices y Tasas", "Codigo":"7"}
+, "Nombre":"Variación en lo que va de año", "Codigo":"5"}
+]

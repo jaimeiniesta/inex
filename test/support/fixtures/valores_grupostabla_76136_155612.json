@@ -1,0 +1,113 @@
+[{"Id":16473, "Variable":{"Id":349, "Nombre":"Totales Territoriales", "Codigo":"100"}
+, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":8997, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Andalucía", "Codigo":"01", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":8998, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Aragón", "Codigo":"02", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":8999, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Asturias, Principado de", "Codigo":"03", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9000, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Balears, Illes", "Codigo":"04", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9001, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Canarias", "Codigo":"05", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9002, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Cantabria", "Codigo":"06", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9003, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Castilla y León", "Codigo":"07", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9004, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Castilla - La Mancha", "Codigo":"08", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9005, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Cataluña", "Codigo":"09", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9006, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Comunitat Valenciana", "Codigo":"10", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9007, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Extremadura", "Codigo":"11", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9008, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Galicia", "Codigo":"12", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9009, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Madrid, Comunidad de", "Codigo":"13", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9010, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Murcia, Región de", "Codigo":"14", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9011, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Navarra, Comunidad Foral de", "Codigo":"15", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9012, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"País Vasco", "Codigo":"16", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9013, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Rioja, La", "Codigo":"17", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":457344, "FK_Variable":349, "Nombre":"España peninsular", "Codigo":""}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":9015, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Ceuta", "Codigo":"18", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+,{"Id":8995, "Variable":{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"0"}
+, "Nombre":"Melilla", "Codigo":"19", "JerarquiaPadres":[{"Id":16473, "FK_Variable":349, "Nombre":"Nacional", "Codigo":"00", "Nota":"Codficación para el CERTI"}
+,{"Id":274511, "FK_Variable":432, "Nombre":"España", "Codigo":"108"}
+,{"Id":274508, "FK_Variable":349, "Nombre":"Total capitales de provincia", "Codigo":"00000"}
+]}
+]

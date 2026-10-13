@@ -1,0 +1,9 @@
+[{"Id":8, "Nombre":"Índice de Precios de Consumo", "FK_Periodicidad":1, "FK_PubFechaAct":12683}
+,
+{"Id":40, "Nombre":"Índice de Precios de Consumo. Medias anuales", "FK_Periodicidad":12, "FK_PubFechaAct":12964}
+,
+{"Id":72, "Nombre":"Publicación de Coeficientes de enlace del IPC", "FK_Periodicidad":12, "FK_PubFechaAct":null}
+,
+{"Id":470, "Nombre":"Ponderaciones IPC", "FK_Periodicidad":12, "FK_PubFechaAct":12990}
+]
+

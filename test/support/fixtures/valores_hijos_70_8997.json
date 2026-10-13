@@ -1,0 +1,9 @@
+[{"Id":5, "FK_Variable":115, "Nombre":"Almería", "Codigo":"04", "FK_JerarquiaPadres":[8997]}
+,{"Id":12, "FK_Variable":115, "Nombre":"Cádiz", "Codigo":"11", "FK_JerarquiaPadres":[8997]}
+,{"Id":15, "FK_Variable":115, "Nombre":"Córdoba", "Codigo":"14", "FK_JerarquiaPadres":[8997]}
+,{"Id":19, "FK_Variable":115, "Nombre":"Granada", "Codigo":"18", "FK_JerarquiaPadres":[8997]}
+,{"Id":22, "FK_Variable":115, "Nombre":"Huelva", "Codigo":"21", "FK_JerarquiaPadres":[8997]}
+,{"Id":24, "FK_Variable":115, "Nombre":"Jaén", "Codigo":"23", "FK_JerarquiaPadres":[8997]}
+,{"Id":30, "FK_Variable":115, "Nombre":"Málaga", "Codigo":"29", "FK_JerarquiaPadres":[8997]}
+,{"Id":41, "FK_Variable":115, "Nombre":"Sevilla", "Codigo":"41", "FK_JerarquiaPadres":[8997]}
+]

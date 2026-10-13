@@ -1,0 +1,7 @@
+{"COD":"IPC290750", "Nombre":"Nacional. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "Data":[{"Fecha":"2026-05-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M05", "Anyo":2026, "Valor":3.2}
+,{"Fecha":"2026-06-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M06", "Anyo":2026, "Valor":3.2}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M07", "Anyo":2026, "Valor":3.6}
+,{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"M08", "Anyo":2026, "Valor":4.3}
+,{"Fecha":"2026-09-01T00:00:00.000+02:00", "T3_TipoDato":"Avance", "T3_Periodo":"M09", "Anyo":2026, "Valor":4.9}
+]
+}

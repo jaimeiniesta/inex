@@ -1,0 +1,191 @@
+# Getting Started with Inex
+
+```elixir
+Mix.install([
+  # Once Inex is published on Hex use {:inex, "~> 0.1.0"} instead
+  {:inex, path: Path.join(__DIR__, "..")},
+  {:kino_explorer, "~> 0.1"},
+  {:kino_vega_lite, "~> 0.1"}
+])
+```
+
+## Introduction
+
+The [INE](https://www.ine.es) (*Instituto Nacional de Estadística*) is Spain's National Statistics
+Institute. Through its [API JSON](https://www.ine.es/dyngs/DAB/index.htm?cid=1099) you can access
+everything published in INEbase: consumer prices (IPC), the labour force survey (EPA), the
+quarterly national accounts (GDP), population, tourism, housing prices and much more.
+
+The API is free and does **not** require an API key, so there is nothing to configure. Let's
+alias the modules we'll use and attach the built-in logger so that we can see every request made
+to the INE:
+
+```elixir
+alias Explorer.DataFrame, as: DF
+alias VegaLite, as: Vl
+
+require Explorer.DataFrame
+
+Inex.Telemetry.Logger.attach(level: :info)
+```
+
+## Exploring a Series
+
+Series are identified by codes like `IPC290750`: the annual change of the national Consumer Price
+Index (CPI). You can find these codes in INEbase (click on any series of a table), in the tables of
+an operation or by filtering the series of an operation (see the *Exploring INEbase* notebook).
+
+`Inex.Series.get/2` returns the metadata of a series. With `detail: 2` and `friendly: true` the
+INE nests the related objects (operation, periodicity, unit...) with readable names:
+
+```elixir
+{:ok, series} = Inex.Series.get("IPC290750", detail: 2, friendly: true)
+
+IO.puts("""
+Name:          #{series["Nombre"]}
+Operation:     #{series["Operacion"]["Nombre"]}
+Periodicity:   #{series["Periodicidad"]["Nombre"]}
+Unit:          #{series["Unidad"]["Nombre"]}
+Last release:  #{series["Publicacion"]["PubFechaAct"]["Nombre"]}
+""")
+```
+
+## Fetching Observations
+
+`Inex.Series.observations/2` returns the data exactly as the INE sends it. `last: n` returns the
+last `n` periods:
+
+```elixir
+{:ok, %{"Data" => data}} = Inex.Series.observations("IPC290750", last: 3, friendly: true)
+
+data
+```
+
+Note the `"T3_TipoDato"` field: the most recent value can be a flash estimate (`"Avance"`) that
+will be revised in the final release (`"Definitivo"`).
+
+Most of the time you'll want the data in an `Explorer.DataFrame`.
+`Inex.Series.observations_as_data_frame!/2` returns a `date` column plus one column per series:
+
+```elixir
+cpi = Inex.Series.observations_as_data_frame!("IPC290750", observation_start: ~D[2002-01-01])
+```
+
+Which we can plot with VegaLite:
+
+```elixir
+Vl.new(width: 700, height: 300, title: "CPI - annual change (%)")
+|> Vl.data_from_values(cpi)
+|> Vl.mark(:area, line: true, opacity: 0.3)
+|> Vl.encode_field(:x, "date", type: :temporal, title: nil)
+|> Vl.encode_field(:y, "IPC290750", type: :quantitative, title: "%")
+```
+
+## Dates and Ranges
+
+`observation_start` and `observation_end` take `Date` structs. With `dates` you can request
+several dates or ranges at once, for example the CPI of every January since 2020:
+
+```elixir
+januaries = for year <- 2020..2026, do: Date.new!(year, 1, 1)
+
+Inex.Series.observations_as_data_frame!("IPC290750", dates: januaries)
+```
+
+```elixir
+Inex.Series.observations_as_data_frame!("IPC290750",
+  observation_start: ~D[2022-01-01],
+  observation_end: ~D[2022-12-31]
+)
+```
+
+## Several Series at Once
+
+Just like `Fred.Series.observations_as_data_frame/2`, you can pass a list of series: they are
+fetched concurrently and joined by date. Here we compare the CPI annual change (monthly) with the
+unemployment rate from the labour force survey (EPA) and the GDP annual growth from the
+quarterly national accounts (CNTR), both quarterly:
+
+```elixir
+indicators =
+  Inex.Series.observations_as_data_frame!(["IPC290750", "EPA452434", "CNTR6654"],
+    observation_start: ~D[2008-01-01],
+    rename: %{"IPC290750" => "cpi", "EPA452434" => "unemployment", "CNTR6654" => "gdp"}
+  )
+```
+
+Monthly and quarterly series share the `date` column, so quarterly series have `nil` values for the
+second and third month of every quarter.
+
+For charts with several series the **long** format is more convenient: one row per observation,
+with the code, name, unit... of each series:
+
+```elixir
+long =
+  Inex.Series.observations_as_data_frame!(["IPC290750", "EPA452434", "CNTR6654"],
+    observation_start: ~D[2008-01-01],
+    format: :long
+  )
+
+Vl.new(width: 700, height: 300, title: "Spanish economy (%)")
+|> Vl.data_from_values(DF.select(long, ["date", "name", "value"]))
+|> Vl.mark(:line)
+|> Vl.encode_field(:x, "date", type: :temporal, title: nil)
+|> Vl.encode_field(:y, "value", type: :quantitative, title: "%")
+|> Vl.encode_field(:color, "name", type: :nominal, legend: [orient: :bottom, label_limit: 600])
+```
+
+## Metadata Columns
+
+With `metadata: true` the long data frame gets one extra column per variable that defines each
+series. This is especially useful for tables (see the next notebooks):
+
+```elixir
+Inex.Series.observations_as_data_frame!(["IPC290750", "IPC290751"],
+  last: 3,
+  format: :long,
+  metadata: true
+)
+```
+
+## English Responses
+
+Names are in Spanish by default. Use `language: :en` (or `config :inex, language: :en`) to get
+them in English:
+
+```elixir
+Inex.Series.observations_as_data_frame!("IPC290750", last: 3, format: :long, language: :en)
+|> DF.select(["name", "date", "value", "data_type", "unit"])
+```
+
+## Errors and Discontinued Series
+
+Every function returns `{:ok, result}` or `{:error, %Inex.Error{}}`. The INE answers unknown
+identifiers with an empty response, which Inex reports as `:not_found`:
+
+```elixir
+Inex.Series.get("NOT_A_SERIES")
+```
+
+Invalid options are caught before making any request:
+
+```elixir
+Inex.Series.observations("IPC290750", last: 0)
+```
+
+Beware of **discontinued series**: when the INE changes the base or methodology of an
+operation, it creates new series codes and stops updating the old ones, which keep answering
+with their historical data without any warning. `IPC251852`, the CPI index used in many
+examples of the INE documentation, stopped being updated with the 2026 change of the CPI
+classification (ECOICOP v2). Always check the date of the latest observation:
+
+```elixir
+for code <- ["IPC251852", "IPC290751"] do
+  {:ok, %{"Nombre" => name, "Data" => [last]}} =
+    Inex.Series.observations(code, last: 1, friendly: true)
+
+  %{code: code, name: name, last_period: "#{last["Anyo"]} #{last["T3_Periodo"]}"}
+end
+```
+
+Head to the *Exploring INEbase* notebook to learn how to find the series and tables you need.

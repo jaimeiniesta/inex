@@ -1,0 +1,69 @@
+[{"COD":"IPC290753", "Nombre":"Nacional. Índice general. Variación en lo que va de año. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":87, "T3_Variable":"Índices y Tasas", "Nombre":"Variación en lo que va de año", "Codigo":"5"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":3.3}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":2.6}
+]
+}
+,{"COD":"IPC290750", "Nombre":"Nacional. Índice general. Variación anual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+]
+, "Data":[{"Fecha":"2026-09-01T00:00:00.000+02:00", "T3_TipoDato":"Avance", "T3_Periodo":"sep.", "Anyo":2026, "Valor":4.9}
+,{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":4.3}
+]
+}
+,{"COD":"IPC292579", "Nombre":"Nacional. Índice general. Índice. Impuestos constantes. ", "T3_Unidad":"Índice", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":83, "T3_Variable":"Índices y Tasas", "Nombre":"Índice", "Codigo":"0"}
+,{"Id":291163, "T3_Variable":"Corrección de efectos", "Nombre":"Impuestos constantes", "Codigo":"ICTES"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":105.024}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":104.457}
+]
+}
+,{"COD":"IPC292578", "Nombre":"Nacional. Índice general. Variación anual. Impuestos constantes. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":74, "T3_Variable":"Índices y Tasas", "Nombre":"Variación anual", "Codigo":"2"}
+,{"Id":291163, "T3_Variable":"Corrección de efectos", "Nombre":"Impuestos constantes", "Codigo":"ICTES"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":4.7}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":4.1}
+]
+}
+,{"COD":"IPC290752", "Nombre":"Nacional. Índice general. Variación mensual. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":84, "T3_Variable":"Índices y Tasas", "Nombre":"Variación mensual", "Codigo":"1"}
+]
+, "Data":[{"Fecha":"2026-09-01T00:00:00.000+02:00", "T3_TipoDato":"Avance", "T3_Periodo":"sep.", "Anyo":2026, "Valor":0.3}
+,{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":0.7}
+]
+}
+,{"COD":"IPC290751", "Nombre":"Nacional. Índice general. Índice. ", "T3_Unidad":"Índice", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":83, "T3_Variable":"Índices y Tasas", "Nombre":"Índice", "Codigo":"0"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":104.638}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":103.899}
+]
+}
+,{"COD":"IPC292580", "Nombre":"Nacional. Índice general. Variación mensual. Impuestos constantes. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":84, "T3_Variable":"Índices y Tasas", "Nombre":"Variación mensual", "Codigo":"1"}
+,{"Id":291163, "T3_Variable":"Corrección de efectos", "Nombre":"Impuestos constantes", "Codigo":"ICTES"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":0.5}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":0.0}
+]
+}
+,{"COD":"IPC292581", "Nombre":"Nacional. Índice general. Variación en lo que va de año. Impuestos constantes. ", "T3_Unidad":"Tasas", "T3_Escala":" ", "MetaData":[{"Id":16473, "T3_Variable":"Totales Territoriales", "Nombre":"Nacional", "Codigo":"00"}
+,{"Id":304092, "T3_Variable":"Grupos ECOICOP", "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":87, "T3_Variable":"Índices y Tasas", "Nombre":"Variación en lo que va de año", "Codigo":"5"}
+,{"Id":291163, "T3_Variable":"Corrección de efectos", "Nombre":"Impuestos constantes", "Codigo":"ICTES"}
+]
+, "Data":[{"Fecha":"2026-08-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"ago.", "Anyo":2026, "Valor":3.7}
+,{"Fecha":"2026-07-01T00:00:00.000+02:00", "T3_TipoDato":"Definitivo", "T3_Periodo":"jul.", "Anyo":2026, "Valor":3.1}
+]
+}
+]

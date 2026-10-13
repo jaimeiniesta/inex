@@ -1,0 +1,29 @@
+[{"Id":1, "Nombre":" ", "Factor":"1E0", "Codigo":"0", "Abrev":null}
+,{"Id":2, "Nombre":"Decenas", "Factor":"1E1", "Codigo":"1", "Abrev":"Decenas"}
+,{"Id":3, "Nombre":"Centenas", "Factor":"1E2", "Codigo":"2", "Abrev":"Centenas"}
+,{"Id":4, "Nombre":"Miles", "Factor":"1E3", "Codigo":"3", "Abrev":"Miles"}
+,{"Id":5, "Nombre":"Décimas", "Factor":"1E-1", "Codigo":"-1", "Abrev":"Décimas"}
+,{"Id":6, "Nombre":"Millonésimas", "Factor":"1E-6", "Codigo":"-6", "Abrev":"Millonésimas"}
+,{"Id":7, "Nombre":"Centésimas de milésimas", "Factor":"1E-5", "Codigo":"-5", "Abrev":"Centésimas de milésimas"}
+,{"Id":8, "Nombre":"Décimas de milésimas", "Factor":"1E-4", "Codigo":"-4", "Abrev":"Décimas de milésimas"}
+,{"Id":9, "Nombre":"Milésimas", "Factor":"1E-3", "Codigo":"-3", "Abrev":"Milésimas"}
+,{"Id":10, "Nombre":"Centésimas", "Factor":"1E-2", "Codigo":"-2", "Abrev":"Centésimas"}
+,{"Id":11, "Nombre":"Decenas de miles", "Factor":"1E4", "Codigo":"4", "Abrev":"Decenas de miles"}
+,{"Id":12, "Nombre":"Centenas de miles", "Factor":"1E5", "Codigo":"5", "Abrev":"Centenas de miles"}
+,{"Id":13, "Nombre":"Millones", "Factor":"1E6", "Codigo":"6", "Abrev":"Millones"}
+,{"Id":14, "Nombre":"Decenas de millones", "Factor":"1E7", "Codigo":"7", "Abrev":"Decenas de millones"}
+,{"Id":15, "Nombre":"Centenas de millones", "Factor":"1E8", "Codigo":"8", "Abrev":"Centenas de millones"}
+,{"Id":16, "Nombre":"Miles de millones", "Factor":"1E9", "Codigo":"9", "Abrev":"Miles de millones"}
+,{"Id":17, "Nombre":"Decenas de miles de millones", "Factor":"1E10", "Codigo":"10", "Abrev":"Dec. de miles de millones"}
+,{"Id":18, "Nombre":"Centenas de miles de millones", "Factor":"1E11", "Codigo":"11", "Abrev":"Cent. miles de millones"}
+,{"Id":19, "Nombre":"Billones", "Factor":"1E12", "Codigo":"12", "Abrev":"Billones"}
+,{"Id":20, "Nombre":"Decenas de billones", "Factor":"1E13", "Codigo":"13", "Abrev":"Decenas de billones"}
+,{"Id":21, "Nombre":"Centenas de billones", "Factor":"1E14", "Codigo":"14", "Abrev":"Centenas de billones"}
+,{"Id":22, "Nombre":"Miles de billones", "Factor":"1E15", "Codigo":"15", "Abrev":"Miles de billones"}
+,{"Id":24, "Nombre":"Décimas de millones", "Factor":"1E-7", "Codigo":"-7", "Abrev":"Décimas de millones"}
+,{"Id":25, "Nombre":"Centésimas de millones", "Factor":"1E-8", "Codigo":"-8", "Abrev":"Centésimas de millones"}
+,{"Id":26, "Nombre":"Billonésimas", "Factor":"1E-9", "Codigo":"-9", "Abrev":"Billonésimas"}
+,{"Id":27, "Nombre":"Décimas de billones", "Factor":"1E-10", "Codigo":"-10", "Abrev":"Décimas de billones"}
+,{"Id":28, "Nombre":"Centésimas de billones", "Factor":"1E-11", "Codigo":"-11", "Abrev":"Centésimas de billones"}
+,{"Id":29, "Nombre":"Trillonésimas", "Factor":"1E-12", "Codigo":"-12", "Abrev":"Trillonésimas"}
+]

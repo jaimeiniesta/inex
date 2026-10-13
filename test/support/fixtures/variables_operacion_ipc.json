@@ -1,0 +1,23 @@
+[{"Id":3, "Nombre":"Tipo de dato", "Codigo":""}
+,
+{"Id":70, "Nombre":"Comunidades y Ciudades Autónomas", "Codigo":"CCAA"}
+,
+{"Id":115, "Nombre":"Provincias", "Codigo":"PROV"}
+,
+{"Id":269, "Nombre":"Grupos especiales 2001", "Codigo":""}
+,
+{"Id":270, "Nombre":"Rúbricas 2001", "Codigo":""}
+,
+{"Id":349, "Nombre":"Total Nacional", "Codigo":"NAC"}
+,
+{"Id":544, "Nombre":"Corrección de efectos", "Codigo":""}
+,
+{"Id":762, "Nombre":"Grupos ECOICOP", "Codigo":""}
+,
+{"Id":763, "Nombre":"Subgrupos ECOICOP", "Codigo":""}
+,
+{"Id":764, "Nombre":"Clases ECOICOP", "Codigo":""}
+,
+{"Id":765, "Nombre":"Subclases ECOICOP", "Codigo":""}
+]
+

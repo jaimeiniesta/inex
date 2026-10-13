@@ -1,0 +1,21 @@
+[{"Id":304092, "FK_Variable":762, "Nombre":"Índice general", "Codigo":"00"}
+,{"Id":304093, "FK_Variable":762, "Nombre":"Alimentos y bebidas no alcohólicas", "Codigo":"01", "FK_JerarquiaPadres":[304092]}
+,{"Id":304094, "FK_Variable":762, "Nombre":"Bebidas alcohólicas y tabaco", "Codigo":"02", "FK_JerarquiaPadres":[304092]}
+,{"Id":304095, "FK_Variable":762, "Nombre":"Vestido y calzado", "Codigo":"03", "FK_JerarquiaPadres":[304092]}
+,{"Id":304096, "FK_Variable":762, "Nombre":"Vivienda, agua, electricidad, gas y otros combustibles", "Codigo":"04", "FK_JerarquiaPadres":[304092]}
+,{"Id":304097, "FK_Variable":762, "Nombre":"Muebles, artículos del hogar y artículos para el mantenimiento corriente del hogar", "Codigo":"05", "FK_JerarquiaPadres":[304092]}
+,{"Id":304098, "FK_Variable":762, "Nombre":"Sanidad", "Codigo":"06", "FK_JerarquiaPadres":[304092]}
+,{"Id":304099, "FK_Variable":762, "Nombre":"Transporte", "Codigo":"07", "FK_JerarquiaPadres":[304092]}
+,{"Id":304100, "FK_Variable":762, "Nombre":"Comunicaciones", "Codigo":"08", "FK_JerarquiaPadres":[304092]}
+,{"Id":304101, "FK_Variable":762, "Nombre":"Ocio y cultura", "Codigo":"09", "FK_JerarquiaPadres":[304092]}
+,{"Id":304102, "FK_Variable":762, "Nombre":"Enseñanza", "Codigo":"10", "FK_JerarquiaPadres":[304092]}
+,{"Id":304103, "FK_Variable":762, "Nombre":"Restaurantes y hoteles", "Codigo":"11", "FK_JerarquiaPadres":[304092]}
+,{"Id":304104, "FK_Variable":762, "Nombre":"Otros bienes y servicios", "Codigo":"12", "FK_JerarquiaPadres":[304092]}
+,{"Id":418050, "FK_Variable":762, "Nombre":"Bebidas alcohólicas, tabaco y estupefacientes", "Codigo":"02", "FK_JerarquiaPadres":[304092]}
+,{"Id":418056, "FK_Variable":762, "Nombre":"Información y comunicaciones", "Codigo":"08", "FK_JerarquiaPadres":[304092]}
+,{"Id":418057, "FK_Variable":762, "Nombre":"Actividades recreativas, deporte y cultura", "Codigo":"09", "FK_JerarquiaPadres":[304092]}
+,{"Id":418058, "FK_Variable":762, "Nombre":"Servicios de educación", "Codigo":"10", "FK_JerarquiaPadres":[304092]}
+,{"Id":418059, "FK_Variable":762, "Nombre":"Restaurantes y servicios de alojamiento", "Codigo":"11", "FK_JerarquiaPadres":[304092]}
+,{"Id":418060, "FK_Variable":762, "Nombre":"Seguros y servicios financieros", "Codigo":"12", "FK_JerarquiaPadres":[304092]}
+,{"Id":418061, "FK_Variable":762, "Nombre":"Cuidado personal, protección social, y bienes y servicios diversos", "Codigo":"13", "FK_JerarquiaPadres":[304092]}
+]

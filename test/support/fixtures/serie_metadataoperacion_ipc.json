@@ -1,0 +1,9 @@
+[{"Id":290753, "COD":"IPC290753", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación en lo que va de año. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+,{"Id":290750, "COD":"IPC290750", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación anual. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+,{"Id":292579, "COD":"IPC292579", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Índice. Impuestos constantes. ", "Decimales":3, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":133}
+,{"Id":292578, "COD":"IPC292578", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación anual. Impuestos constantes. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+,{"Id":290752, "COD":"IPC290752", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación mensual. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+,{"Id":290751, "COD":"IPC290751", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Índice. ", "Decimales":3, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":133}
+,{"Id":292580, "COD":"IPC292580", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación mensual. Impuestos constantes. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+,{"Id":292581, "COD":"IPC292581", "FK_Operacion":25, "Nombre":"Nacional. Índice general. Variación en lo que va de año. Impuestos constantes. ", "Decimales":1, "FK_Periodicidad":1, "FK_Publicacion":8, "FK_Clasificacion":120, "FK_Escala":1, "FK_Unidad":135}
+]
