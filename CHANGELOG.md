@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Documentation: link to the [demo](https://jaimeiniesta.com/en/inex), a *Contributing* section in
+  the README, and the *Spain in Charts* notebook, with the charts of the demo, in place of *The
+  Spanish Economy in Data Frames*.
+
 ## v0.1.1 (2026-10-13)
 
 - Operation filters (`Inex.Series.search/2`, `Inex.Series.search_observations/2`...) accept

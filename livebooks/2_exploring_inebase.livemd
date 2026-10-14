@@ -239,3 +239,6 @@ dates
 |> Enum.take(6)
 |> DF.new()
 ```
+
+The *Spain in Charts* notebook puts all of this to work: it draws the charts of the
+[Inex demo](https://jaimeiniesta.com/en/inex) with the same calls.

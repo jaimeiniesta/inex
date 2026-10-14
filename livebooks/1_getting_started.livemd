@@ -187,4 +187,5 @@ for code <- ["IPC251852", "IPC290751"] do
 end
 ```
 
-Head to the *Exploring INEbase* notebook to learn how to find the series and tables you need.
+Head to the *Exploring INEbase* notebook to learn how to find the series and tables you need, and
+to *Spain in Charts* for the charts of the [Inex demo](https://jaimeiniesta.com/en/inex).

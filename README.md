@@ -6,6 +6,7 @@
   <a href="https://github.com/jaimeiniesta/inex/actions/workflows/ci.yml"><img src="https://github.com/jaimeiniesta/inex/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://hex.pm/packages/inex"><img src="https://img.shields.io/hexpm/v/inex.svg" alt="Hex version"></a>
   <a href="https://hexdocs.pm/inex"><img src="https://img.shields.io/badge/hex-docs-4e2a8e.svg" alt="Documentation"></a>
+  <a href="https://jaimeiniesta.com/en/inex"><img src="https://img.shields.io/badge/demo-live-4e2a8e.svg" alt="Demo"></a>
   <a href="https://github.com/jaimeiniesta/inex/blob/master/LICENSE"><img src="https://img.shields.io/hexpm/l/inex.svg" alt="License"></a>
 </p>
 
@@ -22,6 +23,9 @@ The INE API gives access to everything published in INEbase: consumer prices (IP
 survey (EPA), quarterly national accounts (GDP), population, tourism, housing prices and much more.
 It is free and does **not** require an API key.
 
+**[See the demo](https://jaimeiniesta.com/en/inex):** Spain in charts (prices, jobs, economy, housing,
+population, tourism), each chart with the Inex call that fetched its data.
+
 ## Contents
 
 - [Installation](#installation)
@@ -33,6 +37,7 @@ It is free and does **not** require an API key.
 - [Configuration](#configuration)
 - [Telemetry](#telemetry)
 - [Testing](#testing)
+- [Contributing](#contributing)
 
 ## Installation
 
@@ -242,11 +247,11 @@ The INE parameters are exposed as idiomatic, validated options:
 The `livebooks/` directory contains interactive [Livebook](https://livebook.dev) notebooks with
 [VegaLite](https://hexdocs.pm/vega_lite) charts:
 
-| Notebook                                                                | Description                                                          |
-| ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [`1_getting_started.livemd`](./livebooks/1_getting_started.livemd)      | Series, observations, date ranges, wide data frames and first charts |
-| [`2_exploring_inebase.livemd`](./livebooks/2_exploring_inebase.livemd)  | Operations, tables, variables and values, filters, tidy data frames  |
-| [`3_spanish_economy.livemd`](./livebooks/3_spanish_economy.livemd)      | CPI by region, unemployment and GDP: comparisons and heatmaps        |
+| Notebook                                                               | Description                                                                                                        |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [`1_getting_started.livemd`](./livebooks/1_getting_started.livemd)     | Series, observations, date ranges, wide data frames and first charts                                               |
+| [`2_exploring_inebase.livemd`](./livebooks/2_exploring_inebase.livemd) | Operations, tables, variables and values, filters, tidy data frames                                                |
+| [`3_spain_in_charts.livemd`](./livebooks/3_spain_in_charts.livemd)     | The charts of the [demo](https://jaimeiniesta.com/en/inex): prices, jobs, economy, housing, population and tourism |
 
 ## Configuration
 
@@ -290,6 +295,16 @@ metadata and identifiers.
 The [CI workflow](https://github.com/jaimeiniesta/inex/actions) checks formatting, Credo and
 [Sobelow](https://github.com/nccgroup/sobelow), and runs the unit tests on Elixir 1.18, 1.19 and 1.20.
 
+## Contributing
+
+Contributions are welcome: bug reports, ideas, documentation, examples and pull requests. For bigger
+changes, open an issue first so that we can discuss them. Before sending a pull request, run
+`mix format`, `mix credo --strict` and `mix test`.
+
+You can use AI tools, as long as a human creates and supervises each issue and pull request and
+answers for its content and its review. Coding agents will find instructions in
+[AGENTS.md](https://github.com/jaimeiniesta/inex/blob/master/AGENTS.md).
+
 ## Acknowledgements
 
 - [Fred](https://github.com/akoutmos/fred), whose interface Inex follows.
@@ -302,11 +317,3 @@ The [CI workflow](https://github.com/jaimeiniesta/inex/actions) checks formattin
 ## License
 
 MIT
-
-## Artificial Intelligence
-
-Contributions made with the help of AI tools are welcome. However, every issue and pull request
-must be created and supervised by a human, who is responsible for its content and for following up
-on the review.
-
-AI coding agents will find instructions about this repository in [AGENTS.md](https://github.com/jaimeiniesta/inex/blob/master/AGENTS.md).

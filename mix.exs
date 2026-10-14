@@ -54,6 +54,7 @@ defmodule Inex.MixProject do
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url,
+        "Demo" => "https://jaimeiniesta.com/en/inex",
         "INE API JSON" => "https://www.ine.es/dyngs/DAB/index.htm?cid=1099"
       }
     ]

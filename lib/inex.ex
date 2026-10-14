@@ -10,6 +10,9 @@ defmodule Inex do
   tourism, housing prices and many more. It is free and does **not** require
   an API key.
 
+  See the [demo](https://jaimeiniesta.com/en/inex): Spain in charts, each
+  chart with the Inex call that fetched its data.
+
   ## Run Your First Query
 
       iex> Inex.Series.observations("IPC290750", last: 2, friendly: true)

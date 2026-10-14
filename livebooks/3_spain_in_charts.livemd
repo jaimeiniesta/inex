@@ -1,0 +1,331 @@
+# Spain in Charts
+
+```elixir
+Mix.install([
+  # To try a local checkout use {:inex, path: Path.join(__DIR__, "..")} instead
+  {:inex, "~> 0.1"},
+  {:kino_explorer, "~> 0.1"},
+  {:kino_vega_lite, "~> 0.1"}
+])
+```
+
+## Introduction
+
+Figures everyone in Spain has an opinion about: prices, jobs, the economy, housing, population and
+tourism. These are the charts of the [Inex demo](https://jaimeiniesta.com/en/inex), made with the
+same calls and drawn with [VegaLite](https://hexdocs.pm/vega_lite).
+
+```elixir
+alias Explorer.DataFrame, as: DF
+alias Explorer.Series, as: S
+alias VegaLite, as: Vl
+
+require Explorer.DataFrame
+```
+
+Most charts follow a figure over time. A few rank the values of a table (spending groups, regions,
+countries) in the latest period, with a line for the total. Two helpers draw them: `over_time`
+takes the column to plot, which is the series code for the series and `"value"` for the tables.
+
+```elixir
+over_time = fn df, field, title ->
+  Vl.new(width: 700, height: 300, title: title)
+  |> Vl.data_from_values(DF.select(df, ["date", field]))
+  |> Vl.mark(:line)
+  |> Vl.encode_field(:x, "date", type: :temporal, title: nil)
+  |> Vl.encode_field(:y, field, type: :quantitative, title: nil)
+  |> Vl.encode(:tooltip, [[field: "date", type: :temporal], [field: field, type: :quantitative]])
+end
+
+ranking = fn df, field, title, total ->
+  bars =
+    Vl.new()
+    |> Vl.data_from_values(DF.select(df, [field, "value"]))
+    |> Vl.mark(:bar)
+    |> Vl.encode_field(:y, field,
+      type: :nominal,
+      sort: "-x",
+      title: nil,
+      axis: [label_limit: 400]
+    )
+    |> Vl.encode_field(:x, "value", type: :quantitative, title: nil)
+    |> Vl.encode(:tooltip, [[field: field], [field: "value", type: :quantitative]])
+
+  total_line =
+    Vl.new()
+    |> Vl.data_from_values([%{total: total}])
+    |> Vl.mark(:rule, color: :firebrick, stroke_width: 2)
+    |> Vl.encode_field(:x, "total", type: :quantitative)
+
+  Vl.new(width: 400, title: title)
+  |> Vl.layers(if total, do: [bars, total_line], else: [bars])
+end
+```
+
+## Prices
+
+**Inflation**: the annual change of the consumer price index (CPI), month by month since 2002.
+
+```elixir
+Inex.Series.observations_as_data_frame!(["IPC290750"], observation_start: ~D[2002-01-01])
+|> over_time.("IPC290750", "Inflation (%)")
+```
+
+**What is going up the most**: the annual change (`data_type: 74`) of every spending group
+(`cpi_group: :all`) of table `76125`. The flash estimate (`"Avance"`) of the latest month only has
+the overall index, so we ask for two months and keep the latest one with the whole breakdown. The
+line is the overall index:
+
+```elixir
+groups =
+  Inex.Tables.observations_as_data_frame!(76125,
+    filters: [data_type: 74, cpi_group: :all],
+    last: 2,
+    language: :en
+  )
+  |> DF.rename(%{"ECOICOP Groups" => "group"})
+  |> DF.filter(not is_nil(value))
+
+latest_date = groups |> DF.filter(group != "Overall index") |> DF.pull("date") |> S.max()
+latest = DF.filter(groups, date == ^latest_date)
+overall = latest |> DF.filter(group == "Overall index") |> DF.pull("value") |> S.first()
+
+latest
+|> DF.filter(group != "Overall index")
+|> ranking.("group", "Annual change, #{Calendar.strftime(latest_date, "%B %Y")} (%)", overall)
+```
+
+## Jobs
+
+**Unemployment**: the unemployment rate from the labour force survey (EPA), quarter by quarter
+since 2002.
+
+```elixir
+unemployment =
+  Inex.Series.observations_as_data_frame!(["EPA452434"], observation_start: ~D[2002-01-01])
+
+over_time.(unemployment, "EPA452434", "Unemployment rate (%)")
+```
+
+**Unemployment by region**: table `65334` has the unemployment rate by sex, age and region. We take
+both sexes (`sex: 454`), all ages (`age_total: 15668`) and every autonomous community and city
+(`ccaa: :all`) in the latest quarter. The table has no national total, so the line for Spain is the
+latest value of the series above:
+
+```elixir
+regions =
+  Inex.Tables.observations_as_data_frame!(65334,
+    filters: [sex: 454, age_total: 15668, ccaa: :all],
+    last: 1,
+    language: :en
+  )
+  |> DF.rename(%{"Autonomous Communities and Cities" => "region"})
+
+spain = S.last(unemployment["EPA452434"])
+
+ranking.(regions, "region", "Unemployment rate by region (%)", spain)
+```
+
+**The map of unemployment.** The borders come from [es-atlas](https://github.com/martgnz/es-atlas),
+built from the data of the Spanish National Geographic Institute (IGN), which identifies each region
+by its INE code (`"01"` for Andalucía). Data frames hold the names of the values, not their codes,
+so we get them from `Inex.Variables.values/2` (variable `70`, the autonomous communities) and join
+them:
+
+```elixir
+{:ok, ccaa} = Inex.Variables.values(70, language: :en)
+
+codes =
+  ccaa
+  |> Inex.DataFrame.from_records()
+  |> DF.select(["Nombre", "Codigo"])
+  |> DF.rename(%{"Nombre" => "region", "Codigo" => "region_code"})
+
+rates = regions |> DF.join(codes, on: "region") |> DF.select(["region_code", "region", "value"])
+```
+
+The `lookup` transform joins each border with its rate. The Canary Islands (`"05"`) get a panel of
+their own, so that the map is not mostly ocean. Ceuta and Melilla are too small to be seen at this
+scale: their rates are in the bar chart above.
+
+```elixir
+borders = "https://cdn.jsdelivr.net/npm/es-atlas@0.6.0/es/autonomous_regions.json"
+
+map = fn filter, width, height ->
+  Vl.new(width: width, height: height)
+  |> Vl.transform(filter: filter)
+  |> Vl.projection(type: :mercator)
+  |> Vl.mark(:geoshape, stroke: :white)
+  |> Vl.encode_field(:color, "value", type: :quantitative, scale: [scheme: :reds], title: "%")
+  |> Vl.encode(:tooltip, [[field: "region"], [field: "value", type: :quantitative]])
+end
+
+Vl.new(title: "Unemployment rate (%)")
+|> Vl.data_from_url(borders, format: [type: :topojson, feature: "autonomous_regions"])
+|> Vl.transform(
+  lookup: "id",
+  from: [data: [values: DF.to_rows(rates)], key: "region_code", fields: ["region", "value"]]
+)
+|> Vl.concat(
+  [map.("datum.id == '05'", 200, 120), map.("datum.id != '05'", 500, 400)],
+  :horizontal
+)
+```
+
+## Economy
+
+**Economic growth**: the annual change of gross domestic product (GDP) in volume, quarter by quarter
+since 2002. The bars below zero are the recessions.
+
+```elixir
+growth = Inex.Series.observations_as_data_frame!(["CNTR6654"], observation_start: ~D[2002-01-01])
+
+Vl.new(width: 700, height: 300, title: "GDP growth (%)")
+|> Vl.data_from_values(growth)
+|> Vl.mark(:bar)
+|> Vl.encode_field(:x, "date", type: :temporal, title: nil)
+|> Vl.encode_field(:y, "CNTR6654", type: :quantitative, title: nil)
+|> Vl.encode(:color,
+  condition: [test: "datum.CNTR6654 < 0", value: :firebrick],
+  value: :steelblue
+)
+```
+
+**Wages**: the ordinary wage cost per worker and month, before the extra payments of June and
+December, quarter by quarter since 2008. The variables of table `6038` have no shortcut, so they are
+filtered with `{variable_id, value_id}` tuples: both types of working day (`{120, 10769}`), the
+ordinary wage cost (`{230, 12083}`) and industry, construction and services (`{506, 284446}`).
+
+```elixir
+Inex.Tables.observations_as_data_frame!(6038,
+  filters: [{120, 10769}, {230, 12083}, {506, 284446}],
+  observation_start: ~D[2008-01-01]
+)
+|> over_time.("value", "Ordinary wage cost per worker and month (euros)")
+```
+
+## Housing
+
+**House prices**: the annual change of the housing price index (IPV), quarter by quarter since 2008.
+Tuples and shortcuts can go in the same list: `{345, 16463}` takes new and second-hand homes
+together.
+
+```elixir
+Inex.Tables.observations_as_data_frame!(80270,
+  filters: [{345, 16463}, data_type: 74, national: 16473],
+  observation_start: ~D[2008-01-01]
+)
+|> over_time.("value", "House prices, annual change (%)")
+```
+
+**Rents**: the annual change of the rental housing price index. It is built from income tax
+returns, so it is yearly and comes out a year and a half later.
+
+```elixir
+Inex.Series.observations_as_data_frame!(["IPVA5016"], observation_start: ~D[2011-01-01])
+|> over_time.("IPVA5016", "Rents, annual change (%)")
+```
+
+**Mortgages**: the number of mortgages (`{247, 12417}`) signed on homes (`{240, 12365}`) each month
+in Spain, since 2008.
+
+```elixir
+Inex.Tables.observations_as_data_frame!(13896,
+  filters: [{240, 12365}, {247, 12417}, national: 16473],
+  observation_start: ~D[2008-01-01]
+)
+|> over_time.("value", "Mortgages on homes")
+```
+
+## Population
+
+**Population pyramid**: people living in Spain by sex and age, from 0 to 99, on the latest date
+published. A list of values selects several of them: men (`452`) and women (`453`). Ages come as
+labels (`"0 years old"`, `"1 year old"`...), so we keep their number, and we draw men to the left:
+
+```elixir
+population =
+  Inex.Tables.observations_as_data_frame!(59583,
+    filters: [sex: [452, 453], age: :all],
+    last: 1,
+    language: :en
+  )
+
+pyramid =
+  population
+  |> DF.mutate(
+    age: cast(re_replace(col("Simple age"), ~S/\D/, ""), :integer),
+    people: select(col("Sex") == "Males", value * -1, value)
+  )
+  |> DF.select(["age", "Sex", "people"])
+
+Vl.new(width: 600, height: 500, title: "Population of Spain by age")
+|> Vl.data_from_values(pyramid)
+|> Vl.mark(:bar)
+|> Vl.encode_field(:y, "age",
+  type: :ordinal,
+  sort: :descending,
+  title: nil,
+  axis: [values: Enum.to_list(0..90//10)]
+)
+|> Vl.encode_field(:x, "people",
+  type: :quantitative,
+  title: nil,
+  axis: [label_expr: "format(abs(datum.value), ',')"]
+)
+|> Vl.encode_field(:color, "Sex", type: :nominal, title: nil)
+```
+
+**Births**: the monthly estimate of births in Spain since 2016.
+
+```elixir
+Inex.Tables.observations_as_data_frame!(46682,
+  filters: [data_type: 72, national: 16473],
+  observation_start: ~D[2016-01-01]
+)
+|> over_time.("value", "Births per month")
+```
+
+**Life expectancy** at birth of men and women, year by year since 1975. Table `48882` holds a single
+indicator, so it needs no filters. It also has both sexes together (`"Ambos sexos"`), which we leave
+out:
+
+```elixir
+life_expectancy =
+  Inex.Tables.observations_as_data_frame!(48882)
+  |> DF.filter(col("Sexo") != "Ambos sexos")
+
+Vl.new(width: 700, height: 300, title: "Life expectancy at birth (years)")
+|> Vl.data_from_values(DF.select(life_expectancy, ["date", "Sexo", "value"]))
+|> Vl.mark(:line)
+|> Vl.encode_field(:x, "date", type: :temporal, title: nil)
+|> Vl.encode_field(:y, "value", type: :quantitative, title: nil, scale: [zero: false])
+|> Vl.encode_field(:color, "Sexo", type: :nominal, title: nil)
+```
+
+## Tourism
+
+**International tourists**: foreign tourists arriving in Spain each month since 2016. The hole in
+2020 is the pandemic.
+
+```elixir
+Inex.Tables.observations_as_data_frame!(10823,
+  filters: [data_type: 72, national: 16473],
+  observation_start: ~D[2016-01-01]
+)
+|> over_time.("value", "International tourists per month")
+```
+
+**Where they come from**: tourists so far this year (`data_type: 298086`) by country of residence.
+`{96, :all}` selects every value of variable `96`, the country of residence, which has no
+shortcut. The total goes out of the ranking:
+
+```elixir
+Inex.Tables.observations_as_data_frame!(75719,
+  filters: [{96, :all}, data_type: 298086],
+  last: 1,
+  language: :en
+)
+|> DF.filter(col("Residence") != "Total")
+|> ranking.("Residence", "Tourists so far this year by country of residence", nil)
+```
