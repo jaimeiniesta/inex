@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.1.2 (2026-10-14)
 
 - Documentation: link to the [demo](https://jaimeiniesta.com/en/inex), a *Contributing* section in
   the README, and the *Spain in Charts* notebook, with the charts of the demo, in place of *The
